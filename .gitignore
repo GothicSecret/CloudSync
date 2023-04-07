@@ -1,0 +1,11 @@
+**/.vs/
+**.vssscc
+**.vspscc
+**/bin/
+**/obj/
+**/packages/
+**.dbmdl
+**.tss
+**.jfm
+**.coverage
+**.csproj.user
