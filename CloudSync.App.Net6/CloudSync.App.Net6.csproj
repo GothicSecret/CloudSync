@@ -7,4 +7,14 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\CloudSync.Adapters\CloudSync.Adapters.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Credentials\gcp.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>
