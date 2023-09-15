@@ -4,6 +4,7 @@ namespace CloudSync.Adapters;
 
 public class BucketAdapter
 {
+    private const string ContentType = "application/x-directory";
     private readonly StorageClient _storageClient;
     private readonly string _bucketName;
 
@@ -13,17 +14,17 @@ public class BucketAdapter
         _bucketName = bucketName;
     }
 
-    public async Task<bool> DirectoryExists(string path)
+    public async Task<bool> DirectoryExistsAsync(string path)
     {
         path = EnsurePathIsValid(path);
         var directory = await _storageClient.GetObjectAsync(_bucketName, path);
         return directory != null;
     }
 
-    public async Task CreateDirectory(string path)
+    public async Task CreateDirectoryAsync(string path)
     {
         path = EnsurePathIsValid(path);
-        await _storageClient.UploadObjectAsync(_bucketName, path, "application/x-directory", new MemoryStream());
+        await _storageClient.UploadObjectAsync(_bucketName, path, ContentType, new MemoryStream());
     }
 
     public string EnsurePathIsValid(string path)

@@ -9,3 +9,4 @@
 **.jfm
 **.coverage
 **.csproj.user
+/CloudSync.App.Net6/hostsettings.gs.json

@@ -12,38 +12,38 @@ public class SyncService
         _bucketAdapter = bucketAdapter;
     }
 
-    public async Task Sync(string basePath)
+    public async Task SyncAsync(string basePath)
     {
         foreach (var directory in Directory.EnumerateDirectories(basePath))
         {
-            await SyncDirectory(directory);
+            await SyncDirectoryAsync(directory);
         }
     }
 
-    public async Task SyncDirectory(string directoryPath)
+    public async Task SyncDirectoryAsync(string directoryPath)
     {
-        await EnsureDirectoryExists(directoryPath);
+        await EnsureDirectoryExistsAsync(directoryPath);
         foreach (var file in Directory.EnumerateFiles(directoryPath))
         {
-            await SyncFiles(directoryPath);
+            await SyncFilesAsync(directoryPath);
         }
         foreach (var directory in Directory.EnumerateDirectories(directoryPath))
         {
-            await SyncDirectory(directory);
+            await SyncDirectoryAsync(directory);
         }
     }
 
-    public async Task SyncFiles(string directoryPath)
+    public Task SyncFilesAsync(string directoryPath)
     {
-        //sync files here
+        return Task.CompletedTask;
     }
 
-    public async Task EnsureDirectoryExists(string directoryPath)
+    public async Task EnsureDirectoryExistsAsync(string directoryPath)
     {
-        if (await _bucketAdapter.DirectoryExists(directoryPath))
+        if (await _bucketAdapter.DirectoryExistsAsync(directoryPath))
         {
             return;
         }
-        await _bucketAdapter.CreateDirectory(directoryPath);
+        await _bucketAdapter.CreateDirectoryAsync(directoryPath);
     }
 }
