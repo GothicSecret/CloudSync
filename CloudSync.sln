@@ -1,6 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudSync.App.Net6", "CloudSync.App.Net6\CloudSync.App.Net6.csproj", "{215FB077-098A-43D6-B635-98CB286FAB9B}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{257C2F18-079E-493F-9871-A98F53428F17}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudSync.App.Net6", "CloudSync.App.Net6\CloudSync.App.Net6.csproj", "{215FB077-098A-43D6-B635-98CB286FAB9B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudSync.Adapters", "CloudSync.Adapters\CloudSync.Adapters.csproj", "{34CB0CE5-5780-4F71-B226-676E43AD682C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudSync.Adapters.DI", "CloudSync.Adapters.DI\CloudSync.Adapters.DI.csproj", "{05CB6C8F-56BC-4813-9EE4-2280E0C19503}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudSync.WebApi", "CloudSync.WebApi\CloudSync.WebApi.csproj", "{C73E42BB-5912-4AD4-8A01-3FE909BA2854}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +26,23 @@ Global
 		{215FB077-098A-43D6-B635-98CB286FAB9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{215FB077-098A-43D6-B635-98CB286FAB9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{215FB077-098A-43D6-B635-98CB286FAB9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34CB0CE5-5780-4F71-B226-676E43AD682C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34CB0CE5-5780-4F71-B226-676E43AD682C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34CB0CE5-5780-4F71-B226-676E43AD682C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34CB0CE5-5780-4F71-B226-676E43AD682C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05CB6C8F-56BC-4813-9EE4-2280E0C19503}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05CB6C8F-56BC-4813-9EE4-2280E0C19503}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05CB6C8F-56BC-4813-9EE4-2280E0C19503}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05CB6C8F-56BC-4813-9EE4-2280E0C19503}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C73E42BB-5912-4AD4-8A01-3FE909BA2854}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C73E42BB-5912-4AD4-8A01-3FE909BA2854}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C73E42BB-5912-4AD4-8A01-3FE909BA2854}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C73E42BB-5912-4AD4-8A01-3FE909BA2854}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CD284D65-24F5-4F65-8CBF-CEEC59F98165}
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "CloudSync.App.Net6": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:64353;http://localhost:64354"
+    }
+  }
+}
